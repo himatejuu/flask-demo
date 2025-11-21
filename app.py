@@ -143,14 +143,6 @@ def home():
 </html>
     '''
 
-@app.route('/health')
-def health():
-    return jsonify({
-        'status': 'healthy',
-        'python_version': sys.version,
-        'flask_version': '3.0.0'
-    })
-
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8080))
     app.run(host='0.0.0.0', port=port, debug=False)
